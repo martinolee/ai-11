@@ -14,6 +14,7 @@
 		72B334A620DD283F00C80B90 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B334A520DD283F00C80B90 /* MainViewController.swift */; };
 		72B334A820DD2BC800C80B90 /* MainFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B334A720DD2BC800C80B90 /* MainFeatureCell.swift */; };
 		72B334AA20DD2CDF00C80B90 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B334A920DD2CDF00C80B90 /* SampleData.swift */; };
+		72B334AC20DD380C00C80B90 /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B334AB20DD380C00C80B90 /* ObjectDetectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		72B334A520DD283F00C80B90 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		72B334A720DD2BC800C80B90 /* MainFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureCell.swift; sourceTree = "<group>"; };
 		72B334A920DD2CDF00C80B90 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		72B334AB20DD380C00C80B90 /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		72B3349220DD16AE00C80B90 /* ai 11 */ = {
 			isa = PBXGroup;
 			children = (
+				72B334AD20DD381F00C80B90 /* View Controller */,
+				72B334AE20DD383C00C80B90 /* Cell */,
+				72B334AF20DD385700C80B90 /* Model */,
 				72B3349320DD16AE00C80B90 /* AppDelegate.swift */,
-				72B334A520DD283F00C80B90 /* MainViewController.swift */,
-				72B334A720DD2BC800C80B90 /* MainFeatureCell.swift */,
 				72B3349720DD16AE00C80B90 /* Main.storyboard */,
 				72B3349A20DD16B100C80B90 /* Assets.xcassets */,
 				72B3349C20DD16B100C80B90 /* LaunchScreen.storyboard */,
 				72B3349F20DD16B100C80B90 /* Info.plist */,
-				72B334A920DD2CDF00C80B90 /* SampleData.swift */,
 			);
 			path = "ai 11";
+			sourceTree = "<group>";
+		};
+		72B334AD20DD381F00C80B90 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72B334A520DD283F00C80B90 /* MainViewController.swift */,
+				72B334AB20DD380C00C80B90 /* ObjectDetectionViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		72B334AE20DD383C00C80B90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				72B334A720DD2BC800C80B90 /* MainFeatureCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		72B334AF20DD385700C80B90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72B334A920DD2CDF00C80B90 /* SampleData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +171,7 @@
 				72B3349420DD16AE00C80B90 /* AppDelegate.swift in Sources */,
 				72B334A820DD2BC800C80B90 /* MainFeatureCell.swift in Sources */,
 				72B334A620DD283F00C80B90 /* MainViewController.swift in Sources */,
+				72B334AC20DD380C00C80B90 /* ObjectDetectionViewController.swift in Sources */,
 				72B334AA20DD2CDF00C80B90 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
