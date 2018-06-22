@@ -107,16 +107,23 @@
             </objects>
             <point key="canvasLocation" x="972" y="839"/>
         </scene>
-        <!--View Controller-->
+        <!--Object Detection View Controller-->
         <scene sceneID="ath-Dx-z8Z">
             <objects>
-                <viewController id="lyi-6t-mDU" sceneMemberID="viewController">
+                <viewController id="lyi-6t-mDU" customClass="ObjectDetectionViewController" customModule="ai_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8I-bZ-IsD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OqY-n4-oIl"/>
                     </view>
+                    <navigationItem key="navigationItem" id="roH-Vm-j2Z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MDZ-Zx-2YW">
+                            <connections>
+                                <action selector="addPhoto:" destination="lyi-6t-mDU" id="qaG-AG-47B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFU-4L-wfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,8 +149,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iIE-c6-voa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="RGN-ic-N7i">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RGN-ic-N7i">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
