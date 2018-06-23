@@ -9,7 +9,9 @@
 import UIKit
 
 class ObjectDetectionViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
+    @IBOutlet weak var selectedImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +49,7 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true)
         if let uiImage = info[UIImagePickerControllerEditedImage] as? UIImage {
-            print("이미지를 가져옴")
+            self.selectedImageView.image = uiImage
         }
     }
     

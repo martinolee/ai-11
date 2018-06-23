@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -114,7 +115,20 @@
                     <view key="view" contentMode="scaleToFill" id="L8I-bZ-IsD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UQ0-XV-NfG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UQ0-XV-NfG" secondAttribute="height" multiplier="1:1" id="e0v-ZN-lpM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UQ0-XV-NfG" secondAttribute="trailing" id="QLe-u3-tU4"/>
+                            <constraint firstItem="UQ0-XV-NfG" firstAttribute="leading" secondItem="L8I-bZ-IsD" secondAttribute="leading" id="QaQ-BN-2Y3"/>
+                            <constraint firstItem="UQ0-XV-NfG" firstAttribute="top" secondItem="OqY-n4-oIl" secondAttribute="top" id="k3C-VO-hiZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OqY-n4-oIl"/>
                     </view>
                     <navigationItem key="navigationItem" id="roH-Vm-j2Z">
@@ -124,10 +138,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectedImageView" destination="UQ0-XV-NfG" id="TMs-ZZ-EOt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFU-4L-wfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="839"/>
+            <point key="canvasLocation" x="304.80000000000001" y="838.83058470764627"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NSm-Ue-qsc">
