@@ -7,14 +7,36 @@
 //
 
 import UIKit
+import Vision
 
 class ObjectDetectionViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var selectedImageView: UIImageView!
     
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var confidenceLabel: UILabel!
+    
+    var selectedImage: UIImage? {
+        didSet {
+            self.selectedImageView.image = selectedImage
+        }
+    }
+    
+    var selectedCiImage: CIImage? {
+        get {
+            if let selectedImage = self.selectedImage {
+                return CIImage(image: selectedImage)
+            } else {
+                return nil
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.categoryLabel.text = ""
+        self.confidenceLabel.text = ""
     }
 
     @IBAction func addPhoto(_ sender: UIBarButtonItem) {
@@ -49,7 +71,29 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true)
         if let uiImage = info[UIImagePickerControllerEditedImage] as? UIImage {
-            self.selectedImageView.image = uiImage
+            self.selectedImage = uiImage
+            self.detectObject()
+        }
+    }
+    
+    func detectObject() {
+        if let ciImage = self.selectedCiImage {
+            do {
+                let vnCoreMLModel = try VNCoreMLModel(for: Inceptionv3().model)
+                let request = VNCoreMLRequest(model: vnCoreMLModel, completionHandler: self.handleObjectDetection)
+                request.imageCropAndScaleOption = .centerCrop
+                let requestHandler = VNImageRequestHandler(ciImage: ciImage, options: [:])
+                try requestHandler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func handleObjectDetection(request: VNRequest, error: Error?) {
+        if let result = request.results?.first as? VNClassificationObservation {
+            self.categoryLabel.text = result.identifier
+            self.confidenceLabel.text = "\(String(format: "%.1f", result.confidence * 100))%"
         }
     }
     

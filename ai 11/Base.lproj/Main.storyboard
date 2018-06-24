@@ -122,12 +122,30 @@
                                     <constraint firstAttribute="width" secondItem="UQ0-XV-NfG" secondAttribute="height" multiplier="1:1" id="e0v-ZN-lpM"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confidence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFe-lf-N0I">
+                                <rect key="frame" x="138.5" y="603" width="98" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrX-sF-qe6">
+                                <rect key="frame" x="16" y="547" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZrX-sF-qe6" firstAttribute="leading" secondItem="OqY-n4-oIl" secondAttribute="leading" constant="16" id="413-5R-qRm"/>
+                            <constraint firstItem="KFe-lf-N0I" firstAttribute="top" secondItem="ZrX-sF-qe6" secondAttribute="bottom" constant="20" id="I4a-gm-FuM"/>
+                            <constraint firstItem="OqY-n4-oIl" firstAttribute="trailing" secondItem="ZrX-sF-qe6" secondAttribute="trailing" constant="16" id="IfO-cp-YiR"/>
                             <constraint firstAttribute="trailing" secondItem="UQ0-XV-NfG" secondAttribute="trailing" id="QLe-u3-tU4"/>
                             <constraint firstItem="UQ0-XV-NfG" firstAttribute="leading" secondItem="L8I-bZ-IsD" secondAttribute="leading" id="QaQ-BN-2Y3"/>
+                            <constraint firstItem="ZrX-sF-qe6" firstAttribute="centerX" secondItem="OqY-n4-oIl" secondAttribute="centerX" id="fxK-Pw-A6l"/>
                             <constraint firstItem="UQ0-XV-NfG" firstAttribute="top" secondItem="OqY-n4-oIl" secondAttribute="top" id="k3C-VO-hiZ"/>
+                            <constraint firstItem="OqY-n4-oIl" firstAttribute="bottom" secondItem="KFe-lf-N0I" secondAttribute="bottom" constant="40" id="nfe-qo-q8r"/>
+                            <constraint firstItem="KFe-lf-N0I" firstAttribute="centerX" secondItem="OqY-n4-oIl" secondAttribute="centerX" id="wd3-Cg-nBw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OqY-n4-oIl"/>
                     </view>
@@ -139,6 +157,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="categoryLabel" destination="ZrX-sF-qe6" id="9km-Ba-8bf"/>
+                        <outlet property="confidenceLabel" destination="KFe-lf-N0I" id="GLE-Xh-zAh"/>
                         <outlet property="selectedImageView" destination="UQ0-XV-NfG" id="TMs-ZZ-EOt"/>
                     </connections>
                 </viewController>
