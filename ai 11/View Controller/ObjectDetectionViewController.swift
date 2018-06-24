@@ -16,6 +16,8 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var confidenceLabel: UILabel!
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     var selectedImage: UIImage? {
         didSet {
             self.selectedImageView.image = selectedImage
@@ -35,6 +37,9 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.activityIndicatorView.hidesWhenStopped = true
+        self.activityIndicatorView.stopAnimating()
+        
         self.categoryLabel.text = ""
         self.confidenceLabel.text = ""
     }
@@ -72,7 +77,14 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
         picker.dismiss(animated: true)
         if let uiImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.selectedImage = uiImage
-            self.detectObject()
+            
+            self.categoryLabel.text = ""
+            self.confidenceLabel.text = ""
+            self.activityIndicatorView.startAnimating()
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.detectObject()
+            }
         }
     }
     
@@ -92,8 +104,13 @@ class ObjectDetectionViewController: UIViewController, UINavigationControllerDel
     
     func handleObjectDetection(request: VNRequest, error: Error?) {
         if let result = request.results?.first as? VNClassificationObservation {
-            self.categoryLabel.text = result.identifier
-            self.confidenceLabel.text = "\(String(format: "%.1f", result.confidence * 100))%"
+            
+            DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+                
+                self.categoryLabel.text = result.identifier
+                self.confidenceLabel.text = "\(String(format: "%.1f", result.confidence * 100))%"
+            }
         }
     }
     

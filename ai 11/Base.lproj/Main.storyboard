@@ -134,12 +134,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="INX-1C-lLR">
+                                <rect key="frame" x="177" y="469" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="INX-1C-lLR" firstAttribute="centerX" secondItem="OqY-n4-oIl" secondAttribute="centerX" id="2OO-Mc-R3O"/>
                             <constraint firstItem="ZrX-sF-qe6" firstAttribute="leading" secondItem="OqY-n4-oIl" secondAttribute="leading" constant="16" id="413-5R-qRm"/>
                             <constraint firstItem="KFe-lf-N0I" firstAttribute="top" secondItem="ZrX-sF-qe6" secondAttribute="bottom" constant="20" id="I4a-gm-FuM"/>
                             <constraint firstItem="OqY-n4-oIl" firstAttribute="trailing" secondItem="ZrX-sF-qe6" secondAttribute="trailing" constant="16" id="IfO-cp-YiR"/>
+                            <constraint firstItem="INX-1C-lLR" firstAttribute="top" secondItem="UQ0-XV-NfG" secondAttribute="bottom" constant="30" id="OEI-ya-VaD"/>
                             <constraint firstAttribute="trailing" secondItem="UQ0-XV-NfG" secondAttribute="trailing" id="QLe-u3-tU4"/>
                             <constraint firstItem="UQ0-XV-NfG" firstAttribute="leading" secondItem="L8I-bZ-IsD" secondAttribute="leading" id="QaQ-BN-2Y3"/>
                             <constraint firstItem="ZrX-sF-qe6" firstAttribute="centerX" secondItem="OqY-n4-oIl" secondAttribute="centerX" id="fxK-Pw-A6l"/>
@@ -157,6 +162,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="INX-1C-lLR" id="wOF-2w-fDS"/>
                         <outlet property="categoryLabel" destination="ZrX-sF-qe6" id="9km-Ba-8bf"/>
                         <outlet property="confidenceLabel" destination="KFe-lf-N0I" id="GLE-Xh-zAh"/>
                         <outlet property="selectedImageView" destination="UQ0-XV-NfG" id="TMs-ZZ-EOt"/>
