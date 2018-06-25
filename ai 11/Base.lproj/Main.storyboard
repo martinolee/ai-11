@@ -93,20 +93,58 @@
             </objects>
             <point key="canvasLocation" x="972" y="31.934032983508249"/>
         </scene>
-        <!--View Controller-->
+        <!--Real Time Detection View Controller-->
         <scene sceneID="d0k-6P-qrZ">
             <objects>
-                <viewController id="6tp-Li-6CW" sceneMemberID="viewController">
+                <viewController id="6tp-Li-6CW" customClass="RealTimeDetectionViewController" customModule="ai_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgc-a1-bdV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-7A-sew">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2s-fj-Ek6">
+                                        <rect key="frame" x="16" y="547" width="343" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="confidence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Eu-Qw-fTd">
+                                        <rect key="frame" x="138.5" y="603" width="98" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="N2s-fj-Ek6" secondAttribute="trailing" constant="16" id="9uy-Lb-3Rm"/>
+                                    <constraint firstItem="N2s-fj-Ek6" firstAttribute="leading" secondItem="ab4-7A-sew" secondAttribute="leading" constant="16" id="V7d-aZ-DC7"/>
+                                    <constraint firstItem="2Eu-Qw-fTd" firstAttribute="centerX" secondItem="ab4-7A-sew" secondAttribute="centerX" id="fXS-oY-5I8"/>
+                                    <constraint firstItem="2Eu-Qw-fTd" firstAttribute="top" secondItem="N2s-fj-Ek6" secondAttribute="bottom" constant="20" id="h17-cr-CX8"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Eu-Qw-fTd" secondAttribute="bottom" constant="40" id="ipS-yv-wX5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ab4-7A-sew" secondAttribute="bottom" id="Olr-j8-Y2t"/>
+                            <constraint firstAttribute="trailing" secondItem="ab4-7A-sew" secondAttribute="trailing" id="gv3-fo-fHN"/>
+                            <constraint firstItem="ab4-7A-sew" firstAttribute="leading" secondItem="Sgc-a1-bdV" secondAttribute="leading" id="meE-r6-4fK"/>
+                            <constraint firstItem="ab4-7A-sew" firstAttribute="top" secondItem="Sgc-a1-bdV" secondAttribute="top" id="nzb-Kz-mKr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T9n-k0-rxx"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="ab4-7A-sew" id="6ZA-by-cnY"/>
+                        <outlet property="categoryLabel" destination="N2s-fj-Ek6" id="I2f-Bh-Wi2"/>
+                        <outlet property="confidenceLabel" destination="2Eu-Qw-fTd" id="acn-LH-8ZM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzu-p0-RFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="839"/>
+            <point key="canvasLocation" x="972" y="838.83058470764627"/>
         </scene>
         <!--Object Detection View Controller-->
         <scene sceneID="ath-Dx-z8Z">

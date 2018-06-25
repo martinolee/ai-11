@@ -16,6 +16,10 @@
 		72B334A820DD2BC800C80B90 /* MainFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B334A720DD2BC800C80B90 /* MainFeatureCell.swift */; };
 		72B334AA20DD2CDF00C80B90 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B334A920DD2CDF00C80B90 /* SampleData.swift */; };
 		72B334AC20DD380C00C80B90 /* ObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B334AB20DD380C00C80B90 /* ObjectDetectionViewController.swift */; };
+		72D4600120E0983600EDC1D3 /* RealTimeDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4600020E0983600EDC1D3 /* RealTimeDetectionViewController.swift */; };
+		72D4600820E09BBF00EDC1D3 /* AVCaptureDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4600520E09BBF00EDC1D3 /* AVCaptureDevice+Extension.swift */; };
+		72D4600920E09BBF00EDC1D3 /* VideoCameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4600620E09BBF00EDC1D3 /* VideoCameraType.swift */; };
+		72D4600A20E09BBF00EDC1D3 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D4600720E09BBF00EDC1D3 /* VideoCapture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		72B334A720DD2BC800C80B90 /* MainFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureCell.swift; sourceTree = "<group>"; };
 		72B334A920DD2CDF00C80B90 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		72B334AB20DD380C00C80B90 /* ObjectDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionViewController.swift; sourceTree = "<group>"; };
+		72D4600020E0983600EDC1D3 /* RealTimeDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeDetectionViewController.swift; sourceTree = "<group>"; };
+		72D4600520E09BBF00EDC1D3 /* AVCaptureDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extension.swift"; sourceTree = "<group>"; };
+		72D4600620E09BBF00EDC1D3 /* VideoCameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCameraType.swift; sourceTree = "<group>"; };
+		72D4600720E09BBF00EDC1D3 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		72B3349220DD16AE00C80B90 /* ai 11 */ = {
 			isa = PBXGroup;
 			children = (
+				72D4600420E09BB200EDC1D3 /* VideoCapture */,
 				72B334AD20DD381F00C80B90 /* View Controller */,
 				72B334AE20DD383C00C80B90 /* Cell */,
 				7267E50420DE6D9F003BD816 /* ML Model */,
@@ -88,6 +97,7 @@
 			children = (
 				72B334A520DD283F00C80B90 /* MainViewController.swift */,
 				72B334AB20DD380C00C80B90 /* ObjectDetectionViewController.swift */,
+				72D4600020E0983600EDC1D3 /* RealTimeDetectionViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -106,6 +116,16 @@
 				72B334A920DD2CDF00C80B90 /* SampleData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		72D4600420E09BB200EDC1D3 /* VideoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				72D4600520E09BBF00EDC1D3 /* AVCaptureDevice+Extension.swift */,
+				72D4600620E09BBF00EDC1D3 /* VideoCameraType.swift */,
+				72D4600720E09BBF00EDC1D3 /* VideoCapture.swift */,
+			);
+			path = VideoCapture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +202,11 @@
 				72B3349420DD16AE00C80B90 /* AppDelegate.swift in Sources */,
 				726241E420DF8BDD00EC312E /* Inceptionv3.mlmodel in Sources */,
 				72B334A820DD2BC800C80B90 /* MainFeatureCell.swift in Sources */,
+				72D4600120E0983600EDC1D3 /* RealTimeDetectionViewController.swift in Sources */,
 				72B334A620DD283F00C80B90 /* MainViewController.swift in Sources */,
+				72D4600920E09BBF00EDC1D3 /* VideoCameraType.swift in Sources */,
+				72D4600A20E09BBF00EDC1D3 /* VideoCapture.swift in Sources */,
+				72D4600820E09BBF00EDC1D3 /* AVCaptureDevice+Extension.swift in Sources */,
 				72B334AC20DD380C00C80B90 /* ObjectDetectionViewController.swift in Sources */,
 				72B334AA20DD2CDF00C80B90 /* SampleData.swift in Sources */,
 			);
