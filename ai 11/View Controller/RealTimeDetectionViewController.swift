@@ -37,7 +37,7 @@ class RealTimeDetectionViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if let videoCapture = self.videoCapture {
-            videoCapture.stopCapture()
+            videoCapture.startCapture()
         }
     }
     
