@@ -241,12 +241,21 @@
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtU-5N-age">
+                                <rect key="frame" x="0.0" y="269.5" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="OKX-If-R5L"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="0te-zF-EVL" secondAttribute="trailing" id="3dp-HC-VfB"/>
+                            <constraint firstItem="xtU-5N-age" firstAttribute="leading" secondItem="KNi-OM-B6j" secondAttribute="leading" id="4uQ-bs-ujo"/>
                             <constraint firstItem="0te-zF-EVL" firstAttribute="leading" secondItem="KNi-OM-B6j" secondAttribute="leading" id="5gb-TG-zhz"/>
+                            <constraint firstAttribute="trailing" secondItem="xtU-5N-age" secondAttribute="trailing" id="F8c-c9-uud"/>
                             <constraint firstItem="A7l-hd-7d0" firstAttribute="top" secondItem="0te-zF-EVL" secondAttribute="top" id="GUl-cb-Quv"/>
+                            <constraint firstItem="xtU-5N-age" firstAttribute="top" secondItem="A7l-hd-7d0" secondAttribute="bottom" constant="18" id="Jon-Ha-WeR"/>
                             <constraint firstItem="A7l-hd-7d0" firstAttribute="bottom" secondItem="0te-zF-EVL" secondAttribute="bottom" id="SzV-6U-sw9"/>
                             <constraint firstItem="A7l-hd-7d0" firstAttribute="trailing" secondItem="0te-zF-EVL" secondAttribute="trailing" id="WOS-ts-iLQ"/>
                             <constraint firstItem="0te-zF-EVL" firstAttribute="top" secondItem="Cp6-dO-2Lc" secondAttribute="top" id="rLQ-FB-DvO"/>
@@ -264,6 +273,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="blurredImageView" destination="0te-zF-EVL" id="aXi-qk-olh"/>
+                        <outlet property="facesScrollView" destination="xtU-5N-age" id="asB-dH-TNM"/>
                         <outlet property="selectedImageView" destination="WXx-dB-BcS" id="yAq-TD-xvR"/>
                     </connections>
                 </viewController>
