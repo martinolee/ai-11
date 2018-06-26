@@ -173,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="INX-1C-lLR">
-                                <rect key="frame" x="177" y="469" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="469" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,16 +210,23 @@
             </objects>
             <point key="canvasLocation" x="304.80000000000001" y="838.83058470764627"/>
         </scene>
-        <!--View Controller-->
+        <!--Facial Analysis View Controller-->
         <scene sceneID="NSm-Ue-qsc">
             <objects>
-                <viewController id="qlp-Ae-iC4" sceneMemberID="viewController">
+                <viewController id="qlp-Ae-iC4" customClass="FacialAnalysisViewController" customModule="ai_11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KNi-OM-B6j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Cp6-dO-2Lc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eNI-Es-XZk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="V3H-UA-xNE">
+                            <connections>
+                                <action selector="addPhoto:" destination="qlp-Ae-iC4" id="QV4-S7-NOh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uf-R7-Yuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

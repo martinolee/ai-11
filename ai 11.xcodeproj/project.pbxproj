@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7213658820E1EBA80008D699 /* FacialAnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7213658720E1EBA80008D699 /* FacialAnalysisViewController.swift */; };
 		726241E420DF8BDD00EC312E /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 726241E320DF8BDD00EC312E /* Inceptionv3.mlmodel */; };
 		72B3349420DD16AE00C80B90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3349320DD16AE00C80B90 /* AppDelegate.swift */; };
 		72B3349920DD16AE00C80B90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B3349720DD16AE00C80B90 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7213658720E1EBA80008D699 /* FacialAnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialAnalysisViewController.swift; sourceTree = "<group>"; };
 		726241E320DF8BDD00EC312E /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		72B3349020DD16AE00C80B90 /* ai 11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ai 11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B3349320DD16AE00C80B90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				72B334A520DD283F00C80B90 /* MainViewController.swift */,
 				72B334AB20DD380C00C80B90 /* ObjectDetectionViewController.swift */,
 				72D4600020E0983600EDC1D3 /* RealTimeDetectionViewController.swift */,
+				7213658720E1EBA80008D699 /* FacialAnalysisViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				72B334A820DD2BC800C80B90 /* MainFeatureCell.swift in Sources */,
 				72D4600120E0983600EDC1D3 /* RealTimeDetectionViewController.swift in Sources */,
 				72B334A620DD283F00C80B90 /* MainViewController.swift in Sources */,
+				7213658820E1EBA80008D699 /* FacialAnalysisViewController.swift in Sources */,
 				72D4600920E09BBF00EDC1D3 /* VideoCameraType.swift in Sources */,
 				72D4600A20E09BBF00EDC1D3 /* VideoCapture.swift in Sources */,
 				72D4600820E09BBF00EDC1D3 /* AVCaptureDevice+Extension.swift in Sources */,
