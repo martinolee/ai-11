@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iIE-c6-voa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iIE-c6-voa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,14 +30,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-Sn-WSe">
-                                                    <rect key="frame" x="15" y="14" width="60" height="60"/>
+                                                    <rect key="frame" x="15" y="15" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="49y-Xg-It7"/>
                                                         <constraint firstAttribute="width" constant="60" id="XAu-hI-Ohu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="01Y-VS-LyU">
-                                                    <rect key="frame" x="83" y="25.5" width="272" height="37.5"/>
+                                                    <rect key="frame" x="83" y="26" width="272" height="37.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8i-p1-xRp">
                                                             <rect key="frame" x="0.0" y="0.0" width="272" height="20.5"/>
@@ -217,7 +216,43 @@
                     <view key="view" contentMode="scaleToFill" id="KNi-OM-B6j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0te-zF-EVL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="187.5"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7l-hd-7d0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="187.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mH8-54-6oa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXx-dB-BcS">
+                                            <rect key="frame" x="94" y="0.0" width="187.5" height="187.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="WXx-dB-BcS" secondAttribute="height" multiplier="1:1" id="s8J-F2-Hgb"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WXx-dB-BcS" firstAttribute="centerY" secondItem="mH8-54-6oa" secondAttribute="centerY" id="4XO-C2-QAM"/>
+                                        <constraint firstItem="WXx-dB-BcS" firstAttribute="height" secondItem="mH8-54-6oa" secondAttribute="height" id="4ea-F5-jUc"/>
+                                        <constraint firstItem="WXx-dB-BcS" firstAttribute="centerX" secondItem="mH8-54-6oa" secondAttribute="centerX" id="qK0-B8-PtY"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0te-zF-EVL" secondAttribute="trailing" id="3dp-HC-VfB"/>
+                            <constraint firstItem="0te-zF-EVL" firstAttribute="leading" secondItem="KNi-OM-B6j" secondAttribute="leading" id="5gb-TG-zhz"/>
+                            <constraint firstItem="A7l-hd-7d0" firstAttribute="top" secondItem="0te-zF-EVL" secondAttribute="top" id="GUl-cb-Quv"/>
+                            <constraint firstItem="A7l-hd-7d0" firstAttribute="bottom" secondItem="0te-zF-EVL" secondAttribute="bottom" id="SzV-6U-sw9"/>
+                            <constraint firstItem="A7l-hd-7d0" firstAttribute="trailing" secondItem="0te-zF-EVL" secondAttribute="trailing" id="WOS-ts-iLQ"/>
+                            <constraint firstItem="0te-zF-EVL" firstAttribute="top" secondItem="Cp6-dO-2Lc" secondAttribute="top" id="rLQ-FB-DvO"/>
+                            <constraint firstItem="A7l-hd-7d0" firstAttribute="leading" secondItem="0te-zF-EVL" secondAttribute="leading" id="v9u-as-mNW"/>
+                            <constraint firstItem="0te-zF-EVL" firstAttribute="height" secondItem="KNi-OM-B6j" secondAttribute="width" multiplier="0.5" id="zyC-5h-nDK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cp6-dO-2Lc"/>
                     </view>
                     <navigationItem key="navigationItem" id="eNI-Es-XZk">
@@ -227,10 +262,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="blurredImageView" destination="0te-zF-EVL" id="aXi-qk-olh"/>
+                        <outlet property="selectedImageView" destination="WXx-dB-BcS" id="yAq-TD-xvR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uf-R7-Yuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="839"/>
+            <point key="canvasLocation" x="1640.8" y="838.83058470764627"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pH2-v7-srf">

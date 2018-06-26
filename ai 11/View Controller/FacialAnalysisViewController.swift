@@ -9,7 +9,17 @@
 import UIKit
 
 class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var selectedImage: UIImage? {
+        didSet {
+            self.blurredImageView.image = selectedImage
+            self.selectedImageView.image = selectedImage
+        }
+    }
 
+    @IBOutlet weak var blurredImageView: UIImageView!
+    @IBOutlet weak var selectedImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,4 +54,32 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
         self.present(actionSheet, animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let uiImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.selectedImage = uiImage
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
