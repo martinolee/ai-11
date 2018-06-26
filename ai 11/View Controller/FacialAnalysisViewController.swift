@@ -70,6 +70,7 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
         picker.dismiss(animated: true, completion: nil)
         if let uiImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.selectedImage = uiImage
+            self.removeRectangles()
             
             DispatchQueue.global(qos: .userInitiated).async {
                 self.detectFace()
@@ -113,6 +114,14 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
                 layer.borderColor = UIColor.red.cgColor
                 layer.borderWidth = 1
                 self.selectedImageView.layer.addSublayer(layer)
+            }
+        }
+    }
+    
+    func removeRectangles() {
+        if let sublayers = self.selectedImageView.layer.sublayers {
+            for layer in sublayers {
+                layer.removeFromSuperlayer()
             }
         }
     }
