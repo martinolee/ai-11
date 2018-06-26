@@ -33,6 +33,14 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
         }
     }
     
+    var selectedFace: UIImage? {
+        didSet {
+            if let selectedFace = self.selectedFace {
+                self.performFaceAnalysis(on: selectedFace)
+            }
+        }
+    }
+    
     var faceImageViews = [UIImageView]()
     
     override func viewDidLoad() {
@@ -129,6 +137,10 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
                     let faceUiImage = UIImage(cgImage: faceCgImage, scale: faceImage.scale, orientation: .up)
                     let faceImageView = UIImageView(frame: CGRect(x: 90 * index, y: 0, width: 80, height: 80))
                     faceImageView.image = faceUiImage
+                    faceImageView.isUserInteractionEnabled = true
+                    
+                    let tap = UITapGestureRecognizer(target: self, action: #selector(FacialAnalysisViewController.handleFaceImageViewTap(_:)))
+                    faceImageView.addGestureRecognizer(tap)
                     
                     self.faceImageViews.append(faceImageView)
                     self.facesScrollView.addSubview(faceImageView)
@@ -152,6 +164,25 @@ class FacialAnalysisViewController: UIViewController, UIImagePickerControllerDel
         }
         
         self.faceImageViews.removeAll()
+    }
+    
+    @objc func handleFaceImageViewTap(_ sender: UITapGestureRecognizer) {
+        if let tappedImageView = sender.view as? UIImageView {
+            
+            for faceImageView in self.faceImageViews {
+                faceImageView.layer.borderWidth = 0
+                faceImageView.layer.borderColor = UIColor.clear.cgColor
+            }
+            
+            tappedImageView.layer.borderWidth = 3
+            tappedImageView.layer.borderColor = UIColor.blue.cgColor
+            
+            self.selectedFace = tappedImageView.image
+        }
+    }
+    
+    func performFaceAnalysis(on image: UIImage) {
+        
     }
     
 }
